@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIFA World Cup 2026 · Round of 32</title>
+<style>
+  :root {
+    --navy: #0d2240;
+    --gold: #c9a84c;
+    --white: #ffffff;
+    --text-muted: #6b7280;
+    --border: rgba(201,168,76,0.2);
+    --jun24: #16a34a; --jun24-bg: #dcfce7;
+    --jun25: #2563eb; --jun25-bg: #dbeafe;
+    --jun26: #d97706; --jun26-bg: #fef3c7;
+    --jun27: #6b7280; --jun27-bg: #f3f4f6;
+    --card-bg: #ffffff;
+    --page-bg: #f7f5f0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --card-bg: #1a2235; --page-bg: #111827;
+      --text-muted: #9ca3af; --border: rgba(201,168,76,0.15);
+      --jun24-bg: #14532d; --jun25-bg: #1e3a5f;
+      --jun26-bg: #451a03; --jun27-bg: #1f2937;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--page-bg); color: var(--navy); min-height: 100vh; }
+  @media (prefers-color-scheme: dark) { body { color: #e5e7eb; } }
+
+  header { background: var(--navy); padding: 20px 24px 14px; border-bottom: 2px solid var(--gold); }
+  .header-top { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+  .tournament-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+  h1 { font-size: 22px; font-weight: 700; color: var(--white); line-height: 1.2; }
+  .header-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 6px; }
+  .header-links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+  .header-link { font-size: 11px; font-weight: 600; color: var(--gold); background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3); padding: 4px 10px; border-radius: 5px; text-decoration: none; white-space: nowrap; }
+  .header-link:hover { background: rgba(201,168,76,0.22); }
+
+  .legend { display: flex; gap: 12px; flex-wrap: wrap; padding: 10px 24px; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: rgba(255,255,255,0.6); }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  main { padding: 16px; max-width: 900px; margin: 0 auto; }
+  .day-section { margin-bottom: 20px; }
+  .day-label { font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); padding-bottom: 8px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .matches-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media (max-width: 600px) { .matches-grid { grid-template-columns: 1fr; } }
+
+  .match-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start; transition: box-shadow 0.15s; }
+  .match-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .match-num { font-size: 10px; font-weight: 700; color: var(--gold); min-width: 26px; padding-top: 1px; }
+  .match-teams { flex: 1; }
+
+  .team-name { font-size: 13px; font-weight: 600; line-height: 1.4; min-height: 18px; color: var(--navy); }
+  @media (prefers-color-scheme: dark) { .team-name { color: #f3f4f6; } }
+  .team-name.tbd { color: var(--text-muted); font-weight: 400; font-style: italic; font-size: 12px; }
+  .team-name.confirmed-team { color: #1a4a2a; font-weight: 700; font-size: 13px; font-style: normal; }
+  @media (prefers-color-scheme: dark) { .team-name.confirmed-team { color: #6ee7b7; } }
+
+  .vs-divider { font-size: 10px; color: var(--text-muted); margin: 2px 0; }
+  .match-meta { text-align: right; min-width: 100px; }
+  .match-time { font-size: 12px; font-weight: 600; color: var(--navy); }
+  @media (prefers-color-scheme: dark) { .match-time { color: #f3f4f6; } }
+  .match-venue { font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-top: 1px; }
+
+  .badge { display: inline-block; font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 20px; margin-top: 5px; white-space: nowrap; }
+  .badge.jun24 { background: var(--jun24-bg); color: var(--jun24); }
+  .badge.jun25 { background: var(--jun25-bg); color: var(--jun25); }
+  .badge.jun26 { background: var(--jun26-bg); color: var(--jun26); }
+  .badge.jun27 { background: var(--jun27-bg); color: var(--jun27); }
+
+  footer { text-align: center; font-size: 11px; color: var(--text-muted); padding: 16px; border-top: 1px solid var(--border); margin-top: 8px; }
+  footer a { color: var(--text-muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div>
+      <div class="tournament-label">FIFA World Cup 2026™</div>
+      <h1>Round of 32 Schedule</h1>
+      <div class="header-sub">Teams confirmed Jun 24–27 as group stage concludes · All times Eastern</div>
+      <div class="header-links">
+        <a class="header-link" href="https://www.espn.com/soccer/standings/_/league/fifa.world" target="_blank">📊 Group Standings</a>
+        <a class="header-link" href="https://www.espn.com/soccer/bracket" target="_blank">🏆 Full Bracket</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="legend">
+  <div class="legend-item"><span style="font-size:11px;font-weight:700;color:#6ee7b7;">✓</span>&nbsp;Confirmed team</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#16a34a"></div> TBC Jun 24</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2563eb"></div> TBC Jun 25</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#d97706"></div> TBC Jun 26</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div> TBC Jun 27</div>
+</div>
+
+<main>
+  <div id="schedule"></div>
+</main>
+
+<footer>
+  Confirmed teams as of June 22, 2026 · Remaining teams confirmed Jun 24–27 · Round of 16 begins July 4
+</footer>
+
+<script>
+// confirmed: true = locked in, label shows bold green; confirmed: false = italic placeholder
+const MATCHES = [
+  { id: 'M73', day: 'Sunday, June 28', time: '3:00 PM', venue: 'SoFi Stadium', city: 'Los Angeles', badge: 'jun24',
+    teamA: { label: 'Group A runner-up', confirmed: false },
+    teamB: { label: 'Group B runner-up', confirmed: false } },
+  { id: 'M76', day: 'Monday, June 29', time: '1:00 PM', venue: 'NRG Stadium', city: 'Houston', badge: 'jun25',
+    teamA: { label: 'Group C winner', confirmed: false },
+    teamB: { label: 'Group F runner-up', confirmed: false } },
+  { id: 'M74', day: 'Monday, June 29', time: '4:30 PM', venue: 'Gillette Stadium', city: 'Boston', badge: 'jun25',
+    teamA: { label: 'Germany', confirmed: true },
+    teamB: { label: 'Best 3rd (A/B/C/D/F)', confirmed: false } },
+  { id: 'M75', day: 'Monday, June 29', time: '9:00 PM', venue: 'Estadio BBVA', city: 'Monterrey', badge: 'jun25',
+    teamA: { label: 'Group F winner', confirmed: false },
+    teamB: { label: 'Group C runner-up', confirmed: false } },
+  { id: 'M78', day: 'Tuesday, June 30', time: '1:00 PM', venue: 'AT&T Stadium', city: 'Dallas', badge: 'jun26',
+    teamA: { label: 'Group E runner-up', confirmed: false },
+    teamB: { label: 'Group I runner-up', confirmed: false } },
+  { id: 'M77', day: 'Tuesday, June 30', time: '5:00 PM', venue: 'MetLife Stadium', city: 'New York / NJ', badge: 'jun26',
+    teamA: { label: 'Group I winner', confirmed: false },
+    teamB: { label: 'Best 3rd (C/D/F/G/H)', confirmed: false } },
+  { id: 'M79', day: 'Tuesday, June 30', time: '9:00 PM', venue: 'Estadio Azteca', city: 'Mexico City', badge: 'jun26',
+    teamA: { label: 'Mexico', confirmed: true },
+    teamB: { label: 'Best 3rd (C/E/F/H/I)', confirmed: false } },
+  { id: 'M80', day: 'Wednesday, July 1', time: '12:00 PM', venue: 'Mercedes-Benz Stadium', city: 'Atlanta', badge: 'jun27',
+    teamA: { label: 'Group L winner', confirmed: false },
+    teamB: { label: 'Best 3rd (E/H/I/J/K)', confirmed: false } },
+  { id: 'M81', day: 'Wednesday, July 1', time: '4:00 PM', venue: 'Hard Rock Stadium', city: 'Miami', badge: 'jun27',
+    teamA: { label: 'United States', confirmed: true },
+    teamB: { label: 'Best 3rd (B/E/F/I/J)', confirmed: false } },
+  { id: 'M82', day: 'Wednesday, July 1', time: '9:00 PM', venue: 'Lumen Field', city: 'Seattle', badge: 'jun27',
+    teamA: { label: 'Group G winner', confirmed: false },
+    teamB: { label: 'Best 3rd (A/E/H/I/J)', confirmed: false } },
+  { id: 'M83', day: 'Thursday, July 2', time: '12:00 PM', venue: 'BC Place', city: 'Vancouver', badge: 'jun27',
+    teamA: { label: 'Group K runner-up', confirmed: false },
+    teamB: { label: 'Group L runner-up', confirmed: false } },
+  { id: 'M84', day: 'Thursday, July 2', time: '4:00 PM', venue: 'Arrowhead Stadium', city: 'Kansas City', badge: 'jun27',
+    teamA: { label: 'Group H winner', confirmed: false },
+    teamB: { label: 'Group J runner-up', confirmed: false } },
+  { id: 'M85', day: 'Thursday, July 2', time: '8:00 PM', venue: 'Empower Field', city: 'Denver', badge: 'jun27',
+    teamA: { label: 'Group B winner', confirmed: false },
+    teamB: { label: 'Best 3rd (E/F/G/I/J)', confirmed: false } },
+  { id: 'M86', day: 'Friday, July 3', time: '12:00 PM', venue: 'Hard Rock Stadium', city: 'Miami', badge: 'jun27',
+    teamA: { label: 'Group J winner', confirmed: false },
+    teamB: { label: 'Group H runner-up', confirmed: false } },
+  { id: 'M87', day: 'Friday, July 3', time: '4:00 PM', venue: 'Arrowhead Stadium', city: 'Kansas City', badge: 'jun27',
+    teamA: { label: 'Group K winner', confirmed: false },
+    teamB: { label: 'Best 3rd (D/E/I/J/L)', confirmed: false } },
+  { id: 'M88', day: 'Friday, July 3', time: '8:00 PM', venue: "Levi's Stadium", city: 'San Francisco', badge: 'jun26',
+    teamA: { label: 'Group D runner-up', confirmed: false },
+    teamB: { label: 'Group G runner-up', confirmed: false } },
+];
+
+const BADGE_LABELS = {
+  jun24: 'To Be Confirmed on Jun 24',
+  jun25: 'To Be Confirmed on Jun 25',
+  jun26: 'To Be Confirmed on Jun 26',
+  jun27: 'To Be Confirmed on Jun 27'
+};
+
+function renderSchedule() {
+  const days = [...new Set(MATCHES.map(m => m.day))];
+  const container = document.getElementById('schedule');
+  container.innerHTML = '';
+
+  days.forEach(day => {
+    const dayMatches = MATCHES.filter(m => m.day === day);
+    const section = document.createElement('div');
+    section.className = 'day-section';
+    section.innerHTML = `<div class="day-label">${day}</div><div class="matches-grid"></div>`;
+    const grid = section.querySelector('.matches-grid');
+
+    dayMatches.forEach(match => {
+      const classA = match.teamA.confirmed ? 'confirmed-team' : 'tbd';
+      const classB = match.teamB.confirmed ? 'confirmed-team' : 'tbd';
+      const prefixA = match.teamA.confirmed ? '✓ ' : '';
+      const prefixB = match.teamB.confirmed ? '✓ ' : '';
+
+      const card = document.createElement('div');
+      card.className = 'match-card';
+      card.innerHTML = `
+        <div class="match-num">${match.id}</div>
+        <div class="match-teams">
+          <div class="team-name ${classA}">${prefixA}${match.teamA.label}</div>
+          <div class="vs-divider">vs</div>
+          <div class="team-name ${classB}">${prefixB}${match.teamB.label}</div>
+        </div>
+        <div class="match-meta">
+          <div class="match-time">${match.time} ET</div>
+          <div class="match-venue">${match.venue}<br>${match.city}</div>
+          <div class="badge ${match.badge}">${BADGE_LABELS[match.badge]}</div>
+        </div>`;
+      grid.appendChild(card);
+    });
+
+    container.appendChild(section);
+  });
+}
+
+renderSchedule();
+</script>
+</body>
+</html>
