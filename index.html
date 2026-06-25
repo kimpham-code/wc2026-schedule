@@ -57,24 +57,23 @@
   .match-venue{font-size:11px;color:var(--text-muted);line-height:1.4;margin-top:1px;}
 
   .badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;margin-top:5px;white-space:nowrap;}
-  /* Round of 32 TBC badges */
   .badge.jun24{background:var(--jun24-bg);color:var(--jun24);}
   .badge.jun25{background:var(--jun25-bg);color:var(--jun25);}
   .badge.jun26{background:var(--jun26-bg);color:var(--jun26);}
   .badge.jun27{background:var(--jun27-bg);color:var(--jun27);}
-  /* Later round TBC badges — each a distinct colour */
   .badge.tbc-jun29{background:#fce7f3;color:#9d174d;}
   .badge.tbc-jun30{background:#ecfdf5;color:#065f46;}
-  .badge.tbc-jul1 {background:#eff6ff;color:#1e40af;}
-  .badge.tbc-jul2 {background:#fff7ed;color:#9a3412;}
-  .badge.tbc-jul3 {background:#f0fdf4;color:#166534;}
-  .badge.tbc-jul4 {background:#fdf4ff;color:#6b21a8;}
-  .badge.tbc-jul5 {background:#fef9c3;color:#854d0e;}
-  .badge.tbc-jul6 {background:#f0f9ff;color:#0c4a6e;}
-  .badge.tbc-jul7 {background:#fff1f2;color:#881337;}
+  .badge.tbc-jul1{background:#eff6ff;color:#1e40af;}
+  .badge.tbc-jul2{background:#fff7ed;color:#9a3412;}
+  .badge.tbc-jul3{background:#f0fdf4;color:#166534;}
+  .badge.tbc-jul4{background:#fdf4ff;color:#6b21a8;}
+  .badge.tbc-jul5{background:#fef9c3;color:#854d0e;}
+  .badge.tbc-jul6{background:#f0f9ff;color:#0c4a6e;}
+  .badge.tbc-jul7{background:#fff1f2;color:#881337;}
   .badge.tbc-jul10{background:#fdf4ff;color:#6b21a8;}
   .badge.tbc-jul11{background:#ecfdf5;color:#065f46;}
   .badge.tbc-jul15{background:#fef3c7;color:#92400e;}
+  .badge.tbd-badge{background:var(--jun27-bg);color:var(--jun27);}
   .badge.final-badge{background:#fef3c7;color:#92400e;}
 
   .page-note{font-size:11px;color:var(--text-muted);text-align:center;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:8px;}
@@ -111,7 +110,7 @@
 <!-- ROUND OF 32 -->
 <div class="page active" id="page-r32">
   <div id="r32-schedule"></div>
-  <div class="page-note">All 16 matchups confirmed by Jun 27 · Round of 16 begins Jul 4</div>
+  <div class="page-note">Last updated Jun 24 · 9 of 32 teams confirmed · All times Eastern</div>
 </div>
 
 <!-- ROUND OF 16 -->
@@ -196,7 +195,7 @@
       <div class="match-card"><div class="match-num">M103</div><div class="match-teams"><div class="team-name tbd">Loser M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Loser M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami Gardens, FL</div><div class="badge tbc-jul15">To Be Confirmed on Jul 15</div></div></div>
     </div>
   </div>
-  <div class="page-note">Both semi-final losers confirmed by Jul 15 · Final the following day Jul 19</div>
+  <div class="page-note">Both teams confirmed by Jul 15 · Final the following day Jul 19</div>
 </div>
 
 <!-- FINAL -->
@@ -204,19 +203,19 @@
   <div class="day-section">
     <div class="day-label">Sunday, July 19</div>
     <div class="matches-grid single">
-      <div class="match-card featured"><div class="match-num">M104</div><div class="match-teams"><div class="team-name tbd">Winner M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">MetLife Stadium<br>East Rutherford, NJ</div><div class="badge tbc-jul15">To Be Confirmed on Jul 15</div></div></div>
+      <div class="match-card featured"><div class="match-num">M104</div><div class="match-teams"><div class="team-name tbd">Winner M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">MetLife Stadium<br>East Rutherford, NJ</div><div class="badge final-badge">🏆 World Cup Final</div></div></div>
     </div>
   </div>
-  <div class="page-note">Halftime show: Chris Martin, Shakira, Madonna & BTS · Both finalists confirmed by Jul 15</div>
+  <div class="page-note">Both finalists confirmed by Jul 15 · To Be Confirmed on Jul 15</div>
 </div>
 
 <footer>
-  Confirmed teams as of June 22, 2026 · All times Eastern · Source: FIFA / ESPN
+  Last updated June 24, 2026 · 9 of 32 teams confirmed · All times Eastern · Source: FIFA / ESPN
 </footer>
 
 <script>
 const PAGE_META = {
-  r32:  { title:'Round of 32 Schedule',    sub:'Teams confirmed Jun 24–27 · All times Eastern · Jun 28 – Jul 3' },
+  r32:  { title:'Round of 32 Schedule',    sub:'Last updated Jun 24 · 9 of 32 teams confirmed · All times Eastern · Jun 28 – Jul 3' },
   r16:  { title:'Round of 16 Schedule',    sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 4–7' },
   qf:   { title:'Quarter Finals Schedule', sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 9–11' },
   sf:   { title:'Semi Finals Schedule',    sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 14–15' },
@@ -235,22 +234,54 @@ function showPage(id) {
 }
 
 const MATCHES = [
-  { id:'M73', day:'Sunday, June 28',    time:'3:00 PM',  venue:'SoFi Stadium',         city:'Los Angeles',   badge:'jun24', teamA:{label:'Group A runner-up',confirmed:false}, teamB:{label:'Group B runner-up',confirmed:false} },
-  { id:'M76', day:'Monday, June 29',    time:'1:00 PM',  venue:'NRG Stadium',           city:'Houston',       badge:'jun25', teamA:{label:'Group C winner',confirmed:false},    teamB:{label:'Group F runner-up',confirmed:false} },
-  { id:'M74', day:'Monday, June 29',    time:'4:30 PM',  venue:'Gillette Stadium',      city:'Boston',        badge:'jun25', teamA:{label:'Germany',confirmed:true},             teamB:{label:'Best 3rd (A/B/C/D/F)',confirmed:false} },
-  { id:'M75', day:'Monday, June 29',    time:'9:00 PM',  venue:'Estadio BBVA',          city:'Monterrey',     badge:'jun25', teamA:{label:'Group F winner',confirmed:false},     teamB:{label:'Group C runner-up',confirmed:false} },
-  { id:'M78', day:'Tuesday, June 30',   time:'1:00 PM',  venue:'AT&T Stadium',          city:'Dallas',        badge:'jun26', teamA:{label:'Group E runner-up',confirmed:false},  teamB:{label:'Group I runner-up',confirmed:false} },
-  { id:'M77', day:'Tuesday, June 30',   time:'5:00 PM',  venue:'MetLife Stadium',       city:'New York / NJ', badge:'jun26', teamA:{label:'Group I winner',confirmed:false},     teamB:{label:'Best 3rd (C/D/F/G/H)',confirmed:false} },
-  { id:'M79', day:'Tuesday, June 30',   time:'9:00 PM',  venue:'Estadio Azteca',        city:'Mexico City',   badge:'jun26', teamA:{label:'Mexico',confirmed:true},              teamB:{label:'Best 3rd (C/E/F/H/I)',confirmed:false} },
-  { id:'M80', day:'Wednesday, July 1',  time:'12:00 PM', venue:'Mercedes-Benz Stadium', city:'Atlanta',       badge:'jun27', teamA:{label:'Group L winner',confirmed:false},     teamB:{label:'Best 3rd (E/H/I/J/K)',confirmed:false} },
-  { id:'M81', day:'Wednesday, July 1',  time:'4:00 PM',  venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27', teamA:{label:'United States',confirmed:true},        teamB:{label:'Best 3rd (B/E/F/I/J)',confirmed:false} },
-  { id:'M82', day:'Wednesday, July 1',  time:'9:00 PM',  venue:'Lumen Field',           city:'Seattle',       badge:'jun27', teamA:{label:'Group G winner',confirmed:false},     teamB:{label:'Best 3rd (A/E/H/I/J)',confirmed:false} },
-  { id:'M83', day:'Thursday, July 2',   time:'12:00 PM', venue:'BC Place',              city:'Vancouver',     badge:'jun27', teamA:{label:'Group K runner-up',confirmed:false},  teamB:{label:'Group L runner-up',confirmed:false} },
-  { id:'M84', day:'Thursday, July 2',   time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27', teamA:{label:'Group H winner',confirmed:false},     teamB:{label:'Group J runner-up',confirmed:false} },
-  { id:'M85', day:'Thursday, July 2',   time:'8:00 PM',  venue:'Empower Field',         city:'Denver',        badge:'jun27', teamA:{label:'Group B winner',confirmed:false},     teamB:{label:'Best 3rd (E/F/G/I/J)',confirmed:false} },
-  { id:'M86', day:'Friday, July 3',     time:'12:00 PM', venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27', teamA:{label:'Group J winner',confirmed:false},     teamB:{label:'Group H runner-up',confirmed:false} },
-  { id:'M87', day:'Friday, July 3',     time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27', teamA:{label:'Group K winner',confirmed:false},     teamB:{label:'Best 3rd (D/E/I/J/L)',confirmed:false} },
-  { id:'M88', day:'Friday, July 3',     time:'8:00 PM',  venue:"Levi's Stadium",        city:'San Francisco', badge:'jun26', teamA:{label:'Group D runner-up',confirmed:false},  teamB:{label:'Group G runner-up',confirmed:false} },
+  { id:'M73', day:'Sunday, June 28',    time:'3:00 PM',  venue:'SoFi Stadium',         city:'Los Angeles',   badge:'jun24',
+    teamA:{label:'Group A runner-up',confirmed:false},
+    teamB:{label:'Canada',confirmed:true} },
+  { id:'M76', day:'Monday, June 29',    time:'1:00 PM',  venue:'NRG Stadium',           city:'Houston',       badge:'jun25',
+    teamA:{label:'Group C winner',confirmed:false},
+    teamB:{label:'Group F runner-up',confirmed:false} },
+  { id:'M74', day:'Monday, June 29',    time:'4:30 PM',  venue:'Gillette Stadium',      city:'Boston',        badge:'jun25',
+    teamA:{label:'Germany',confirmed:true},
+    teamB:{label:'Best 3rd (A/B/C/D/F)',confirmed:false} },
+  { id:'M75', day:'Monday, June 29',    time:'9:00 PM',  venue:'Estadio BBVA',          city:'Monterrey',     badge:'jun25',
+    teamA:{label:'Group F winner',confirmed:false},
+    teamB:{label:'Group C runner-up',confirmed:false} },
+  { id:'M78', day:'Tuesday, June 30',   time:'1:00 PM',  venue:'AT&T Stadium',          city:'Dallas',        badge:'jun26',
+    teamA:{label:'France or Norway (TBC Jun 26)',confirmed:false},
+    teamB:{label:'France or Norway (TBC Jun 26)',confirmed:false} },
+  { id:'M77', day:'Tuesday, June 30',   time:'5:00 PM',  venue:'MetLife Stadium',       city:'New York / NJ', badge:'jun26',
+    teamA:{label:'France or Norway (TBC Jun 26)',confirmed:false},
+    teamB:{label:'Best 3rd (C/D/F/G/H)',confirmed:false} },
+  { id:'M79', day:'Tuesday, June 30',   time:'9:00 PM',  venue:'Estadio Azteca',        city:'Mexico City',   badge:'jun26',
+    teamA:{label:'Mexico',confirmed:true},
+    teamB:{label:'Best 3rd (C/E/F/H/I)',confirmed:false} },
+  { id:'M80', day:'Wednesday, July 1',  time:'12:00 PM', venue:'Mercedes-Benz Stadium', city:'Atlanta',       badge:'jun27',
+    teamA:{label:'Group L winner',confirmed:false},
+    teamB:{label:'Best 3rd (E/H/I/J/K)',confirmed:false} },
+  { id:'M81', day:'Wednesday, July 1',  time:'4:00 PM',  venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27',
+    teamA:{label:'United States',confirmed:true},
+    teamB:{label:'Best 3rd (B/E/F/I/J)',confirmed:false} },
+  { id:'M82', day:'Wednesday, July 1',  time:'9:00 PM',  venue:'Lumen Field',           city:'Seattle',       badge:'jun27',
+    teamA:{label:'Group G winner',confirmed:false},
+    teamB:{label:'Best 3rd (A/E/H/I/J)',confirmed:false} },
+  { id:'M83', day:'Thursday, July 2',   time:'12:00 PM', venue:'BC Place',              city:'Vancouver',     badge:'jun27',
+    teamA:{label:'Group K runner-up',confirmed:false},
+    teamB:{label:'Group L runner-up',confirmed:false} },
+  { id:'M84', day:'Thursday, July 2',   time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27',
+    teamA:{label:'Group H winner',confirmed:false},
+    teamB:{label:'Argentina',confirmed:true} },
+  { id:'M85', day:'Thursday, July 2',   time:'8:00 PM',  venue:'Empower Field',         city:'Denver',        badge:'jun27',
+    teamA:{label:'Switzerland',confirmed:true},
+    teamB:{label:'Best 3rd (E/F/G/I/J)',confirmed:false} },
+  { id:'M86', day:'Friday, July 3',     time:'12:00 PM', venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27',
+    teamA:{label:'Argentina or Group J runner-up (TBC Jun 27)',confirmed:false},
+    teamB:{label:'Group H runner-up',confirmed:false} },
+  { id:'M87', day:'Friday, July 3',     time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27',
+    teamA:{label:'Colombia or Group K runner-up (TBC Jun 27)',confirmed:false},
+    teamB:{label:'Best 3rd (D/E/I/J/L)',confirmed:false} },
+  { id:'M88', day:'Friday, July 3',     time:'8:00 PM',  venue:"Levi's Stadium",        city:'San Francisco', badge:'jun26',
+    teamA:{label:'Group D runner-up',confirmed:false},
+    teamB:{label:'Group G runner-up',confirmed:false} },
 ];
 
 const BADGE_LABELS = { jun24:'To Be Confirmed on Jun 24', jun25:'To Be Confirmed on Jun 25', jun26:'To Be Confirmed on Jun 26', jun27:'To Be Confirmed on Jun 27' };
