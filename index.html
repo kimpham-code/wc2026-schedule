@@ -13,7 +13,6 @@
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--page-bg);color:var(--navy);min-height:100vh;}
   @media(prefers-color-scheme:dark){body{color:#e5e7eb;}}
-
   header{background:var(--navy);padding:18px 24px 12px;border-bottom:2px solid var(--gold);}
   .tournament-label{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:3px;}
   h1{font-size:20px;font-weight:700;color:var(--white);line-height:1.2;}
@@ -21,25 +20,20 @@
   .header-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:7px;}
   .header-link{font-size:11px;font-weight:600;color:var(--gold);background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);padding:4px 10px;border-radius:5px;text-decoration:none;white-space:nowrap;}
   .header-link:hover{background:rgba(201,168,76,.22);}
-
   .stage-nav{background:var(--navy);padding:0 16px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;gap:0;overflow-x:auto;}
   .stage-tab{font-size:11px;font-weight:600;color:rgba(255,255,255,.5);padding:10px 12px;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap;transition:color .15s;}
   .stage-tab:hover{color:rgba(255,255,255,.8);}
   .stage-tab.active{color:var(--gold);border-bottom-color:var(--gold);}
-
   .legend{display:flex;gap:12px;flex-wrap:wrap;padding:9px 20px;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.08);}
   .legend-item{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,.6);}
   .legend-dot{width:8px;height:8px;border-radius:50%;}
-
   .page{display:none;padding:16px;max-width:900px;margin:0 auto;}
   .page.active{display:block;}
-
   .day-section{margin-bottom:20px;}
   .day-label{font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--text-muted);padding-bottom:7px;border-bottom:1px solid var(--border);margin-bottom:8px;}
   .matches-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
   @media(max-width:560px){.matches-grid{grid-template-columns:1fr;}}
   .matches-grid.single{grid-template-columns:1fr;}
-
   .match-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:12px 14px;display:flex;gap:10px;align-items:flex-start;transition:box-shadow .15s;}
   .match-card:hover{box-shadow:0 2px 8px rgba(0,0,0,.08);}
   .match-card.featured{border-color:var(--gold);border-width:2px;}
@@ -55,7 +49,6 @@
   .match-time{font-size:12px;font-weight:600;color:var(--navy);}
   @media(prefers-color-scheme:dark){.match-time{color:#f3f4f6;}}
   .match-venue{font-size:11px;color:var(--text-muted);line-height:1.4;margin-top:1px;}
-
   .badge{display:inline-block;font-size:10px;font-weight:600;padding:2px 7px;border-radius:20px;margin-top:5px;white-space:nowrap;}
   .badge.jun24{background:var(--jun24-bg);color:var(--jun24);}
   .badge.jun25{background:var(--jun25-bg);color:var(--jun25);}
@@ -75,7 +68,6 @@
   .badge.tbc-jul15{background:#fef3c7;color:#92400e;}
   .badge.tbd-badge{background:var(--jun27-bg);color:var(--jun27);}
   .badge.final-badge{background:#fef3c7;color:#92400e;}
-
   .page-note{font-size:11px;color:var(--text-muted);text-align:center;padding:10px 0 4px;border-top:1px solid var(--border);margin-top:8px;}
   footer{text-align:center;font-size:11px;color:var(--text-muted);padding:14px;border-top:1px solid var(--border);margin-top:4px;}
 </style>
@@ -83,7 +75,7 @@
 <header>
   <div class="tournament-label">FIFA World Cup 2026™</div>
   <h1 id="page-title">Round of 32 Schedule</h1>
-  <div class="header-sub" id="page-sub">Teams confirmed Jun 24–27 · All times Eastern</div>
+  <div class="header-sub" id="page-sub">Last updated Jun 24 · 12 of 32 teams confirmed · All times Eastern</div>
   <div class="header-links">
     <a class="header-link" href="https://www.espn.com/soccer/standings/_/league/fifa.world" target="_blank">📊 Group Standings</a>
     <a class="header-link" href="https://www.espn.com/soccer/bracket" target="_blank">🏆 Full Bracket</a>
@@ -107,115 +99,74 @@
   <div class="legend-item"><div class="legend-dot" style="background:#6b7280"></div> TBC Jun 27</div>
 </div>
 
-<!-- ROUND OF 32 -->
 <div class="page active" id="page-r32">
   <div id="r32-schedule"></div>
-  <div class="page-note">Last updated Jun 24 · 9 of 32 teams confirmed · All times Eastern</div>
+  <div class="page-note">Last updated Jun 24 · 12 of 32 teams confirmed · All times Eastern</div>
 </div>
 
-<!-- ROUND OF 16 -->
 <div class="page" id="page-r16">
-  <div class="day-section">
-    <div class="day-label">Saturday, July 4</div>
-    <div class="matches-grid">
-      <div class="match-card"><div class="match-num">M90</div><div class="match-teams"><div class="team-name tbd">Winner M73 (Jun 28)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M75 (Jun 29)</div></div><div class="match-meta"><div class="match-time">1:00 PM ET</div><div class="match-venue">NRG Stadium<br>Houston</div><div class="badge tbc-jun29">To Be Confirmed on Jun 29</div></div></div>
-      <div class="match-card"><div class="match-num">M89</div><div class="match-teams"><div class="team-name tbd">Winner M74 (Jun 29)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M77 (Jun 30)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Lincoln Financial<br>Philadelphia</div><div class="badge tbc-jun30">To Be Confirmed on Jun 30</div></div></div>
-    </div>
-  </div>
-  <div class="day-section">
-    <div class="day-label">Sunday, July 5</div>
-    <div class="matches-grid">
-      <div class="match-card"><div class="match-num">M91</div><div class="match-teams"><div class="team-name tbd">Winner M76 (Jun 29)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M78 (Jun 30)</div></div><div class="match-meta"><div class="match-time">4:00 PM ET</div><div class="match-venue">MetLife Stadium<br>New York / NJ</div><div class="badge tbc-jun30">To Be Confirmed on Jun 30</div></div></div>
-      <div class="match-card"><div class="match-num">M92</div><div class="match-teams"><div class="team-name tbd">Winner M79 (Jun 30)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M80 (Jul 1)</div></div><div class="match-meta"><div class="match-time">8:00 PM ET</div><div class="match-venue">Estadio Azteca<br>Mexico City</div><div class="badge tbc-jul1">To Be Confirmed on Jul 1</div></div></div>
-    </div>
-  </div>
-  <div class="day-section">
-    <div class="day-label">Monday, July 6</div>
-    <div class="matches-grid">
-      <div class="match-card"><div class="match-num">M93</div><div class="match-teams"><div class="team-name tbd">Winner M83 (Jul 2)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M84 (Jul 2)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">AT&T Stadium<br>Dallas</div><div class="badge tbc-jul2">To Be Confirmed on Jul 2</div></div></div>
-      <div class="match-card"><div class="match-num">M94</div><div class="match-teams"><div class="team-name tbd">Winner M81 (Jul 1)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M82 (Jul 1)</div></div><div class="match-meta"><div class="match-time">8:00 PM ET</div><div class="match-venue">Lumen Field<br>Seattle</div><div class="badge tbc-jul1">To Be Confirmed on Jul 1</div></div></div>
-    </div>
-  </div>
-  <div class="day-section">
-    <div class="day-label">Tuesday, July 7</div>
-    <div class="matches-grid">
-      <div class="match-card"><div class="match-num">M95</div><div class="match-teams"><div class="team-name tbd">Winner M86 (Jul 3)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M88 (Jul 3)</div></div><div class="match-meta"><div class="match-time">12:00 PM ET</div><div class="match-venue">Mercedes-Benz<br>Atlanta</div><div class="badge tbc-jul3">To Be Confirmed on Jul 3</div></div></div>
-      <div class="match-card"><div class="match-num">M96</div><div class="match-teams"><div class="team-name tbd">Winner M85 (Jul 2)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M87 (Jul 3)</div></div><div class="match-meta"><div class="match-time">4:00 PM ET</div><div class="match-venue">BC Place<br>Vancouver</div><div class="badge tbc-jul3">To Be Confirmed on Jul 3</div></div></div>
-    </div>
-  </div>
+  <div class="day-section"><div class="day-label">Saturday, July 4</div><div class="matches-grid">
+    <div class="match-card"><div class="match-num">M90</div><div class="match-teams"><div class="team-name tbd">Winner M73 (Jun 28)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M75 (Jun 29)</div></div><div class="match-meta"><div class="match-time">1:00 PM ET</div><div class="match-venue">NRG Stadium<br>Houston</div><div class="badge tbc-jun29">To Be Confirmed on Jun 29</div></div></div>
+    <div class="match-card"><div class="match-num">M89</div><div class="match-teams"><div class="team-name tbd">Winner M74 (Jun 29)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M77 (Jun 30)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Lincoln Financial<br>Philadelphia</div><div class="badge tbc-jun30">To Be Confirmed on Jun 30</div></div></div>
+  </div></div>
+  <div class="day-section"><div class="day-label">Sunday, July 5</div><div class="matches-grid">
+    <div class="match-card"><div class="match-num">M91</div><div class="match-teams"><div class="team-name tbd">Winner M76 (Jun 29)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M78 (Jun 30)</div></div><div class="match-meta"><div class="match-time">4:00 PM ET</div><div class="match-venue">MetLife Stadium<br>New York / NJ</div><div class="badge tbc-jun30">To Be Confirmed on Jun 30</div></div></div>
+    <div class="match-card"><div class="match-num">M92</div><div class="match-teams"><div class="team-name tbd">Winner M79 (Jun 30)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M80 (Jul 1)</div></div><div class="match-meta"><div class="match-time">8:00 PM ET</div><div class="match-venue">Estadio Azteca<br>Mexico City</div><div class="badge tbc-jul1">To Be Confirmed on Jul 1</div></div></div>
+  </div></div>
+  <div class="day-section"><div class="day-label">Monday, July 6</div><div class="matches-grid">
+    <div class="match-card"><div class="match-num">M93</div><div class="match-teams"><div class="team-name tbd">Winner M83 (Jul 2)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M84 (Jul 2)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">AT&T Stadium<br>Dallas</div><div class="badge tbc-jul2">To Be Confirmed on Jul 2</div></div></div>
+    <div class="match-card"><div class="match-num">M94</div><div class="match-teams"><div class="team-name tbd">Winner M81 (Jul 1)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M82 (Jul 1)</div></div><div class="match-meta"><div class="match-time">8:00 PM ET</div><div class="match-venue">Lumen Field<br>Seattle</div><div class="badge tbc-jul1">To Be Confirmed on Jul 1</div></div></div>
+  </div></div>
+  <div class="day-section"><div class="day-label">Tuesday, July 7</div><div class="matches-grid">
+    <div class="match-card"><div class="match-num">M95</div><div class="match-teams"><div class="team-name tbd">Winner M86 (Jul 3)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M88 (Jul 3)</div></div><div class="match-meta"><div class="match-time">12:00 PM ET</div><div class="match-venue">Mercedes-Benz<br>Atlanta</div><div class="badge tbc-jul3">To Be Confirmed on Jul 3</div></div></div>
+    <div class="match-card"><div class="match-num">M96</div><div class="match-teams"><div class="team-name tbd">Winner M85 (Jul 2)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M87 (Jul 3)</div></div><div class="match-meta"><div class="match-time">4:00 PM ET</div><div class="match-venue">BC Place<br>Vancouver</div><div class="badge tbc-jul3">To Be Confirmed on Jul 3</div></div></div>
+  </div></div>
   <div class="page-note">Teams confirmed as soon as both feeder Round of 32 matches are played · Quarter Finals begin Jul 9</div>
 </div>
 
-<!-- QUARTER FINALS -->
 <div class="page" id="page-qf">
-  <div class="day-section">
-    <div class="day-label">Wednesday, July 9</div>
-    <div class="matches-grid single">
-      <div class="match-card"><div class="match-num">M97</div><div class="match-teams"><div class="team-name tbd">Winner M89 (Jul 4)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M90 (Jul 4)</div></div><div class="match-meta"><div class="match-time">4:00 PM ET</div><div class="match-venue">Gillette Stadium<br>Boston</div><div class="badge tbc-jul4">To Be Confirmed on Jul 4</div></div></div>
-    </div>
-  </div>
-  <div class="day-section">
-    <div class="day-label">Thursday, July 10</div>
-    <div class="matches-grid single">
-      <div class="match-card"><div class="match-num">M98</div><div class="match-teams"><div class="team-name tbd">Winner M93 (Jul 6)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M94 (Jul 6)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">SoFi Stadium<br>Los Angeles</div><div class="badge tbc-jul6">To Be Confirmed on Jul 6</div></div></div>
-    </div>
-  </div>
-  <div class="day-section">
-    <div class="day-label">Saturday, July 11</div>
-    <div class="matches-grid">
-      <div class="match-card"><div class="match-num">M99</div><div class="match-teams"><div class="team-name tbd">Winner M91 (Jul 5)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M92 (Jul 5)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami</div><div class="badge tbc-jul5">To Be Confirmed on Jul 5</div></div></div>
-      <div class="match-card"><div class="match-num">M100</div><div class="match-teams"><div class="team-name tbd">Winner M95 (Jul 7)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M96 (Jul 7)</div></div><div class="match-meta"><div class="match-time">9:00 PM ET</div><div class="match-venue">Arrowhead Stadium<br>Kansas City</div><div class="badge tbc-jul7">To Be Confirmed on Jul 7</div></div></div>
-    </div>
-  </div>
+  <div class="day-section"><div class="day-label">Wednesday, July 9</div><div class="matches-grid single">
+    <div class="match-card"><div class="match-num">M97</div><div class="match-teams"><div class="team-name tbd">Winner M89 (Jul 4)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M90 (Jul 4)</div></div><div class="match-meta"><div class="match-time">4:00 PM ET</div><div class="match-venue">Gillette Stadium<br>Boston</div><div class="badge tbc-jul4">To Be Confirmed on Jul 4</div></div></div>
+  </div></div>
+  <div class="day-section"><div class="day-label">Thursday, July 10</div><div class="matches-grid single">
+    <div class="match-card"><div class="match-num">M98</div><div class="match-teams"><div class="team-name tbd">Winner M93 (Jul 6)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M94 (Jul 6)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">SoFi Stadium<br>Los Angeles</div><div class="badge tbc-jul6">To Be Confirmed on Jul 6</div></div></div>
+  </div></div>
+  <div class="day-section"><div class="day-label">Saturday, July 11</div><div class="matches-grid">
+    <div class="match-card"><div class="match-num">M99</div><div class="match-teams"><div class="team-name tbd">Winner M91 (Jul 5)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M92 (Jul 5)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami</div><div class="badge tbc-jul5">To Be Confirmed on Jul 5</div></div></div>
+    <div class="match-card"><div class="match-num">M100</div><div class="match-teams"><div class="team-name tbd">Winner M95 (Jul 7)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M96 (Jul 7)</div></div><div class="match-meta"><div class="match-time">9:00 PM ET</div><div class="match-venue">Arrowhead Stadium<br>Kansas City</div><div class="badge tbc-jul7">To Be Confirmed on Jul 7</div></div></div>
+  </div></div>
   <div class="page-note">Teams confirmed as soon as both feeder Round of 16 matches are played · Semi Finals begin Jul 14</div>
 </div>
 
-<!-- SEMI FINALS -->
 <div class="page" id="page-sf">
-  <div class="day-section">
-    <div class="day-label">Tuesday, July 14</div>
-    <div class="matches-grid single">
-      <div class="match-card"><div class="match-num">M101</div><div class="match-teams"><div class="team-name tbd">Winner M97 (Jul 9)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M98 (Jul 10)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">AT&T Stadium<br>Dallas</div><div class="badge tbc-jul10">To Be Confirmed on Jul 10</div></div></div>
-    </div>
-  </div>
-  <div class="day-section">
-    <div class="day-label">Wednesday, July 15</div>
-    <div class="matches-grid single">
-      <div class="match-card"><div class="match-num">M102</div><div class="match-teams"><div class="team-name tbd">Winner M99 (Jul 11)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M100 (Jul 11)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">Mercedes-Benz Stadium<br>Atlanta</div><div class="badge tbc-jul11">To Be Confirmed on Jul 11</div></div></div>
-    </div>
-  </div>
+  <div class="day-section"><div class="day-label">Tuesday, July 14</div><div class="matches-grid single">
+    <div class="match-card"><div class="match-num">M101</div><div class="match-teams"><div class="team-name tbd">Winner M97 (Jul 9)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M98 (Jul 10)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">AT&T Stadium<br>Dallas</div><div class="badge tbc-jul10">To Be Confirmed on Jul 10</div></div></div>
+  </div></div>
+  <div class="day-section"><div class="day-label">Wednesday, July 15</div><div class="matches-grid single">
+    <div class="match-card"><div class="match-num">M102</div><div class="match-teams"><div class="team-name tbd">Winner M99 (Jul 11)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M100 (Jul 11)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">Mercedes-Benz Stadium<br>Atlanta</div><div class="badge tbc-jul11">To Be Confirmed on Jul 11</div></div></div>
+  </div></div>
   <div class="page-note">Teams confirmed as soon as both feeder Quarter Final matches are played · 3rd Place & Final Jul 18–19</div>
 </div>
 
-<!-- 3RD PLACE -->
 <div class="page" id="page-tp">
-  <div class="day-section">
-    <div class="day-label">Saturday, July 18</div>
-    <div class="matches-grid single">
-      <div class="match-card"><div class="match-num">M103</div><div class="match-teams"><div class="team-name tbd">Loser M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Loser M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami Gardens, FL</div><div class="badge tbc-jul15">To Be Confirmed on Jul 15</div></div></div>
-    </div>
-  </div>
+  <div class="day-section"><div class="day-label">Saturday, July 18</div><div class="matches-grid single">
+    <div class="match-card"><div class="match-num">M103</div><div class="match-teams"><div class="team-name tbd">Loser M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Loser M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami Gardens, FL</div><div class="badge tbc-jul15">To Be Confirmed on Jul 15</div></div></div>
+  </div></div>
   <div class="page-note">Both teams confirmed by Jul 15 · Final the following day Jul 19</div>
 </div>
 
-<!-- FINAL -->
 <div class="page" id="page-final">
-  <div class="day-section">
-    <div class="day-label">Sunday, July 19</div>
-    <div class="matches-grid single">
-      <div class="match-card featured"><div class="match-num">M104</div><div class="match-teams"><div class="team-name tbd">Winner M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">MetLife Stadium<br>East Rutherford, NJ</div><div class="badge final-badge">🏆 World Cup Final</div></div></div>
-    </div>
-  </div>
+  <div class="day-section"><div class="day-label">Sunday, July 19</div><div class="matches-grid single">
+    <div class="match-card featured"><div class="match-num">M104</div><div class="match-teams"><div class="team-name tbd">Winner M101 (Jul 14)</div><div class="vs-divider">vs</div><div class="team-name tbd">Winner M102 (Jul 15)</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">MetLife Stadium<br>East Rutherford, NJ</div><div class="badge final-badge">🏆 World Cup Final</div></div></div>
+  </div></div>
   <div class="page-note">Both finalists confirmed by Jul 15 · To Be Confirmed on Jul 15</div>
 </div>
 
-<footer>
-  Last updated June 24, 2026 · 9 of 32 teams confirmed · All times Eastern · Source: FIFA / ESPN
-</footer>
+<footer>Last updated June 24, 2026 · 12 of 32 teams confirmed · All times Eastern · Source: FIFA / ESPN</footer>
 
 <script>
 const PAGE_META = {
-  r32:  { title:'Round of 32 Schedule',    sub:'Last updated Jun 24 · 9 of 32 teams confirmed · All times Eastern · Jun 28 – Jul 3' },
+  r32:  { title:'Round of 32 Schedule',    sub:'Last updated Jun 24 · 12 of 32 teams confirmed · All times Eastern · Jun 28 – Jul 3' },
   r16:  { title:'Round of 16 Schedule',    sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 4–7' },
   qf:   { title:'Quarter Finals Schedule', sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 9–11' },
   sf:   { title:'Semi Finals Schedule',    sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 14–15' },
@@ -235,53 +186,37 @@ function showPage(id) {
 
 const MATCHES = [
   { id:'M73', day:'Sunday, June 28',    time:'3:00 PM',  venue:'SoFi Stadium',         city:'Los Angeles',   badge:'jun24',
-    teamA:{label:'Group A runner-up',confirmed:false},
-    teamB:{label:'Canada',confirmed:true} },
+    teamA:{label:'South Africa',confirmed:true}, teamB:{label:'Canada',confirmed:true} },
   { id:'M76', day:'Monday, June 29',    time:'1:00 PM',  venue:'NRG Stadium',           city:'Houston',       badge:'jun25',
-    teamA:{label:'Group C winner',confirmed:false},
-    teamB:{label:'Group F runner-up',confirmed:false} },
+    teamA:{label:'Brazil',confirmed:true}, teamB:{label:'Group F runner-up',confirmed:false} },
   { id:'M74', day:'Monday, June 29',    time:'4:30 PM',  venue:'Gillette Stadium',      city:'Boston',        badge:'jun25',
-    teamA:{label:'Germany',confirmed:true},
-    teamB:{label:'Best 3rd (A/B/C/D/F)',confirmed:false} },
+    teamA:{label:'Germany',confirmed:true}, teamB:{label:'Best 3rd (A/B/C/D/F)',confirmed:false} },
   { id:'M75', day:'Monday, June 29',    time:'9:00 PM',  venue:'Estadio BBVA',          city:'Monterrey',     badge:'jun25',
-    teamA:{label:'Group F winner',confirmed:false},
-    teamB:{label:'Group C runner-up',confirmed:false} },
+    teamA:{label:'Group F winner',confirmed:false}, teamB:{label:'Morocco',confirmed:true} },
   { id:'M78', day:'Tuesday, June 30',   time:'1:00 PM',  venue:'AT&T Stadium',          city:'Dallas',        badge:'jun26',
-    teamA:{label:'France or Norway (TBC Jun 26)',confirmed:false},
-    teamB:{label:'France or Norway (TBC Jun 26)',confirmed:false} },
+    teamA:{label:'Group E runner-up',confirmed:false}, teamB:{label:'France or Norway (TBC Jun 26)',confirmed:false} },
   { id:'M77', day:'Tuesday, June 30',   time:'5:00 PM',  venue:'MetLife Stadium',       city:'New York / NJ', badge:'jun26',
-    teamA:{label:'France or Norway (TBC Jun 26)',confirmed:false},
-    teamB:{label:'Best 3rd (C/D/F/G/H)',confirmed:false} },
+    teamA:{label:'France or Norway (TBC Jun 26)',confirmed:false}, teamB:{label:'Best 3rd (C/D/F/G/H)',confirmed:false} },
   { id:'M79', day:'Tuesday, June 30',   time:'9:00 PM',  venue:'Estadio Azteca',        city:'Mexico City',   badge:'jun26',
-    teamA:{label:'Mexico',confirmed:true},
-    teamB:{label:'Best 3rd (C/E/F/H/I)',confirmed:false} },
+    teamA:{label:'Mexico',confirmed:true}, teamB:{label:'Best 3rd (C/E/F/H/I)',confirmed:false} },
   { id:'M80', day:'Wednesday, July 1',  time:'12:00 PM', venue:'Mercedes-Benz Stadium', city:'Atlanta',       badge:'jun27',
-    teamA:{label:'Group L winner',confirmed:false},
-    teamB:{label:'Best 3rd (E/H/I/J/K)',confirmed:false} },
+    teamA:{label:'Group L winner',confirmed:false}, teamB:{label:'Best 3rd (E/H/I/J/K)',confirmed:false} },
   { id:'M81', day:'Wednesday, July 1',  time:'4:00 PM',  venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27',
-    teamA:{label:'United States',confirmed:true},
-    teamB:{label:'Best 3rd (B/E/F/I/J)',confirmed:false} },
+    teamA:{label:'United States',confirmed:true}, teamB:{label:'Best 3rd (B/E/F/I/J)',confirmed:false} },
   { id:'M82', day:'Wednesday, July 1',  time:'9:00 PM',  venue:'Lumen Field',           city:'Seattle',       badge:'jun27',
-    teamA:{label:'Group G winner',confirmed:false},
-    teamB:{label:'Best 3rd (A/E/H/I/J)',confirmed:false} },
+    teamA:{label:'Group G winner',confirmed:false}, teamB:{label:'Best 3rd (A/E/H/I/J)',confirmed:false} },
   { id:'M83', day:'Thursday, July 2',   time:'12:00 PM', venue:'BC Place',              city:'Vancouver',     badge:'jun27',
-    teamA:{label:'Group K runner-up',confirmed:false},
-    teamB:{label:'Group L runner-up',confirmed:false} },
+    teamA:{label:'Group K runner-up',confirmed:false}, teamB:{label:'Group L runner-up',confirmed:false} },
   { id:'M84', day:'Thursday, July 2',   time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27',
-    teamA:{label:'Group H winner',confirmed:false},
-    teamB:{label:'Argentina',confirmed:true} },
+    teamA:{label:'Group H winner',confirmed:false}, teamB:{label:'Argentina',confirmed:true} },
   { id:'M85', day:'Thursday, July 2',   time:'8:00 PM',  venue:'Empower Field',         city:'Denver',        badge:'jun27',
-    teamA:{label:'Switzerland',confirmed:true},
-    teamB:{label:'Best 3rd (E/F/G/I/J)',confirmed:false} },
+    teamA:{label:'Switzerland',confirmed:true}, teamB:{label:'Best 3rd (E/F/G/I/J)',confirmed:false} },
   { id:'M86', day:'Friday, July 3',     time:'12:00 PM', venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27',
-    teamA:{label:'Argentina or Group J runner-up (TBC Jun 27)',confirmed:false},
-    teamB:{label:'Group H runner-up',confirmed:false} },
+    teamA:{label:'Argentina or Group J runner-up (TBC Jun 27)',confirmed:false}, teamB:{label:'Group H runner-up',confirmed:false} },
   { id:'M87', day:'Friday, July 3',     time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27',
-    teamA:{label:'Colombia or Group K runner-up (TBC Jun 27)',confirmed:false},
-    teamB:{label:'Best 3rd (D/E/I/J/L)',confirmed:false} },
+    teamA:{label:'Colombia or Group K runner-up (TBC Jun 27)',confirmed:false}, teamB:{label:'Best 3rd (D/E/I/J/L)',confirmed:false} },
   { id:'M88', day:'Friday, July 3',     time:'8:00 PM',  venue:"Levi's Stadium",        city:'San Francisco', badge:'jun26',
-    teamA:{label:'Group D runner-up',confirmed:false},
-    teamB:{label:'Group G runner-up',confirmed:false} },
+    teamA:{label:'Group D runner-up',confirmed:false}, teamB:{label:'Group G runner-up',confirmed:false} },
 ];
 
 const BADGE_LABELS = { jun24:'To Be Confirmed on Jun 24', jun25:'To Be Confirmed on Jun 25', jun26:'To Be Confirmed on Jun 26', jun27:'To Be Confirmed on Jun 27' };
@@ -320,6 +255,5 @@ function renderR32() {
     container.appendChild(section);
   });
 }
-
 renderR32();
 </script>
