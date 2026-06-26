@@ -75,7 +75,7 @@
 <header>
   <div class="tournament-label">FIFA World Cup 2026™</div>
   <h1 id="page-title">Round of 32 Schedule</h1>
-  <div class="header-sub" id="page-sub">Last updated Jun 24 · 12 of 32 teams confirmed · All times Eastern</div>
+  <div class="header-sub" id="page-sub">Last updated Jun 25 · 15 of 32 teams confirmed · All times Eastern</div>
   <div class="header-links">
     <a class="header-link" href="https://www.espn.com/soccer/standings/_/league/fifa.world" target="_blank">📊 Group Standings</a>
     <a class="header-link" href="https://www.espn.com/soccer/bracket" target="_blank">🏆 Full Bracket</a>
@@ -101,7 +101,7 @@
 
 <div class="page active" id="page-r32">
   <div id="r32-schedule"></div>
-  <div class="page-note">Last updated Jun 24 · 12 of 32 teams confirmed · All times Eastern</div>
+  <div class="page-note">Last updated Jun 25 · 15 of 32 teams confirmed · Group D runner-up TBC tonight · All times Eastern</div>
 </div>
 
 <div class="page" id="page-r16">
@@ -162,11 +162,11 @@
   <div class="page-note">Both finalists confirmed by Jul 15 · To Be Confirmed on Jul 15</div>
 </div>
 
-<footer>Last updated June 24, 2026 · 12 of 32 teams confirmed · All times Eastern · Source: FIFA / ESPN</footer>
+<footer>Last updated June 25, 2026 · 15 of 32 teams confirmed · All times Eastern · Source: FIFA / ESPN</footer>
 
 <script>
 const PAGE_META = {
-  r32:  { title:'Round of 32 Schedule',    sub:'Last updated Jun 24 · 12 of 32 teams confirmed · All times Eastern · Jun 28 – Jul 3' },
+  r32:  { title:'Round of 32 Schedule',    sub:'Last updated Jun 25 · 15 of 32 teams confirmed · All times Eastern · Jun 28 – Jul 3' },
   r16:  { title:'Round of 16 Schedule',    sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 4–7' },
   qf:   { title:'Quarter Finals Schedule', sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 9–11' },
   sf:   { title:'Semi Finals Schedule',    sub:'Teams confirmed as feeder matches are played · All times Eastern · Jul 14–15' },
@@ -188,13 +188,13 @@ const MATCHES = [
   { id:'M73', day:'Sunday, June 28',    time:'3:00 PM',  venue:'SoFi Stadium',         city:'Los Angeles',   badge:'jun24',
     teamA:{label:'South Africa',confirmed:true}, teamB:{label:'Canada',confirmed:true} },
   { id:'M76', day:'Monday, June 29',    time:'1:00 PM',  venue:'NRG Stadium',           city:'Houston',       badge:'jun25',
-    teamA:{label:'Brazil',confirmed:true}, teamB:{label:'Group F runner-up',confirmed:false} },
+    teamA:{label:'Brazil',confirmed:true}, teamB:{label:'Japan',confirmed:true} },
   { id:'M74', day:'Monday, June 29',    time:'4:30 PM',  venue:'Gillette Stadium',      city:'Boston',        badge:'jun25',
     teamA:{label:'Germany',confirmed:true}, teamB:{label:'Best 3rd (A/B/C/D/F)',confirmed:false} },
   { id:'M75', day:'Monday, June 29',    time:'9:00 PM',  venue:'Estadio BBVA',          city:'Monterrey',     badge:'jun25',
-    teamA:{label:'Group F winner',confirmed:false}, teamB:{label:'Morocco',confirmed:true} },
+    teamA:{label:'Netherlands',confirmed:true}, teamB:{label:'Morocco',confirmed:true} },
   { id:'M78', day:'Tuesday, June 30',   time:'1:00 PM',  venue:'AT&T Stadium',          city:'Dallas',        badge:'jun26',
-    teamA:{label:'Group E runner-up',confirmed:false}, teamB:{label:'France or Norway (TBC Jun 26)',confirmed:false} },
+    teamA:{label:'Ivory Coast',confirmed:true}, teamB:{label:'France or Norway (TBC Jun 26)',confirmed:false} },
   { id:'M77', day:'Tuesday, June 30',   time:'5:00 PM',  venue:'MetLife Stadium',       city:'New York / NJ', badge:'jun26',
     teamA:{label:'France or Norway (TBC Jun 26)',confirmed:false}, teamB:{label:'Best 3rd (C/D/F/G/H)',confirmed:false} },
   { id:'M79', day:'Tuesday, June 30',   time:'9:00 PM',  venue:'Estadio Azteca',        city:'Mexico City',   badge:'jun26',
@@ -212,11 +212,11 @@ const MATCHES = [
   { id:'M85', day:'Thursday, July 2',   time:'8:00 PM',  venue:'Empower Field',         city:'Denver',        badge:'jun27',
     teamA:{label:'Switzerland',confirmed:true}, teamB:{label:'Best 3rd (E/F/G/I/J)',confirmed:false} },
   { id:'M86', day:'Friday, July 3',     time:'12:00 PM', venue:'Hard Rock Stadium',     city:'Miami',         badge:'jun27',
-    teamA:{label:'Argentina or Group J runner-up (TBC Jun 27)',confirmed:false}, teamB:{label:'Group H runner-up',confirmed:false} },
+    teamA:{label:'Group J runner-up (TBC Jun 27)',confirmed:false}, teamB:{label:'Group H runner-up',confirmed:false} },
   { id:'M87', day:'Friday, July 3',     time:'4:00 PM',  venue:'Arrowhead Stadium',     city:'Kansas City',   badge:'jun27',
     teamA:{label:'Colombia or Group K runner-up (TBC Jun 27)',confirmed:false}, teamB:{label:'Best 3rd (D/E/I/J/L)',confirmed:false} },
   { id:'M88', day:'Friday, July 3',     time:'8:00 PM',  venue:"Levi's Stadium",        city:'San Francisco', badge:'jun26',
-    teamA:{label:'Group D runner-up',confirmed:false}, teamB:{label:'Group G runner-up',confirmed:false} },
+    teamA:{label:'Paraguay or Australia (TBC Jun 25)',confirmed:false}, teamB:{label:'Group G runner-up',confirmed:false} },
 ];
 
 const BADGE_LABELS = { jun24:'To Be Confirmed on Jun 24', jun25:'To Be Confirmed on Jun 25', jun26:'To Be Confirmed on Jun 26', jun27:'To Be Confirmed on Jun 27' };
