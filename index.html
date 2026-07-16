@@ -75,7 +75,7 @@
 <header>
   <div class="tournament-label">FIFA World Cup 2026™</div>
   <h1 id="page-title">Round of 16</h1>
-  <div class="header-sub" id="page-sub">Last updated Jul 11 · All 4 QF complete · All times Eastern</div>
+  <div class="header-sub" id="page-sub">Last updated Jul 15 · Semi Finals complete · All times Eastern</div>
   <div class="header-links">
     <a class="header-link" href="https://www.espn.com/soccer/standings/_/league/fifa.world" target="_blank">📊 Group Standings</a>
     <a class="header-link" href="https://www.espn.com/soccer/bracket" target="_blank">🏆 Full Bracket</a>
@@ -86,9 +86,9 @@
   <div class="stage-tab" onclick="showPage('r32')">Round of 32<br><span style="font-size:10px;opacity:.6">Jun 28</span></div>
   <div class="stage-tab" onclick="showPage('r16')">Round of 16<br><span style="font-size:10px;opacity:.6">Jul 4</span></div>
   <div class="stage-tab" onclick="showPage('qf')">Quarter Finals<br><span style="font-size:10px;opacity:.6">Jul 9</span></div>
-  <div class="stage-tab active" onclick="showPage('sf')">Semi Finals<br><span style="font-size:10px;opacity:.6">Jul 14</span></div>
+  <div class="stage-tab" onclick="showPage('sf')">Semi Finals<br><span style="font-size:10px;opacity:.6">Jul 14</span></div>
   <div class="stage-tab" onclick="showPage('tp')">3rd Place<br><span style="font-size:10px;opacity:.6">Jul 18</span></div>
-  <div class="stage-tab" onclick="showPage('final')">Final<br><span style="font-size:10px;opacity:.6">Jul 19</span></div>
+  <div class="stage-tab active" onclick="showPage('final')">Final<br><span style="font-size:10px;opacity:.6">Jul 19</span></div>
 </div>
 
 <div class="legend" id="legend-bar" style="display:none;">
@@ -98,7 +98,7 @@
 <!-- ROUND OF 32 -->
 <div class="page" id="page-r32">
   <div id="r32-schedule"></div>
-  <div class="page-note">Last updated Jul 11 · All QF complete · SF: France vs Spain (Jul 14) & England vs Argentina (Jul 15) · Round of 16 begins July 4</div>
+  <div class="page-note">Last updated Jul 15 · Both SF complete · FINAL: Spain vs Argentina · Jul 19 3PM ET · MetLife Stadium · Round of 16 begins July 4</div>
 </div>
 
 <!-- ROUND OF 16 -->
@@ -234,12 +234,12 @@
 </div>
 
 <!-- SEMI FINALS -->
-<div class="page active" id="page-sf">
+<div class="page" id="page-sf">
   <div class="day-section"><div class="day-label">Tuesday, July 14</div><div class="matches-grid single">
-    <div class="match-card tbc"><div class="match-num">M101</div><div class="match-teams"><div class="team-name">✓ France</div><div class="vs-divider">vs</div><div class="team-name">✓ Spain</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">AT&T Stadium<br>Dallas</div><div class="badge b-jul10">To Be Confirmed on Jul 10</div></div></div>
+    <div class="match-card"><div class="match-num">M101</div><div class="match-teams"><div class="team-name" style="text-decoration:line-through;color:var(--text-muted);font-weight:400">France</div><div class="vs-divider">vs</div><div class="team-name">🏆 Spain</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">AT&T Stadium<br>Dallas</div><div class="badge" style="background:#dcfce7;color:#16a34a;margin-top:5px;">0-2 ✓</div></div></div>
   </div></div>
   <div class="day-section"><div class="day-label">Wednesday, July 15</div><div class="matches-grid single">
-    <div class="match-card tbc"><div class="match-num">M102</div><div class="match-teams"><div class="team-name">✓ England</div><div class="vs-divider">vs</div><div class="team-name">✓ Argentina</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">Mercedes-Benz Stadium<br>Atlanta</div><div class="badge b-jul11">To Be Confirmed on Jul 11</div></div></div>
+    <div class="match-card"><div class="match-num">M102</div><div class="match-teams"><div class="team-name" style="text-decoration:line-through;color:var(--text-muted);font-weight:400">England</div><div class="vs-divider">vs</div><div class="team-name">🏆 Argentina</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">Mercedes-Benz Stadium<br>Atlanta</div><div class="badge" style="background:#dcfce7;color:#16a34a;margin-top:5px;">1-2 ✓</div></div></div>
   </div></div>
   <div class="page-note">Teams confirmed as feeder QF matches conclude · 3rd Place &amp; Final Jul 18–19</div>
 </div>
@@ -247,15 +247,15 @@
 <!-- 3RD PLACE -->
 <div class="page" id="page-tp">
   <div class="day-section"><div class="day-label">Saturday, July 18</div><div class="matches-grid single">
-    <div class="match-card tbc"><div class="match-num">M103</div><div class="match-teams"><div class="tbd-name">Semi Final 1 loser</div><div class="vs-divider">vs</div><div class="tbd-name">Semi Final 2 loser</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami Gardens, FL</div><div class="badge b-jul15">To Be Confirmed on Jul 15</div></div></div>
+    <div class="match-card"><div class="match-num">M103</div><div class="match-teams"><div class="team-name">✓ France</div><div class="vs-divider">vs</div><div class="team-name">✓ England</div></div><div class="match-meta"><div class="match-time">5:00 PM ET</div><div class="match-venue">Hard Rock Stadium<br>Miami Gardens, FL</div></div></div>
   </div></div>
   <div class="page-note">Both teams confirmed by Jul 15 · Final the following day Jul 19</div>
 </div>
 
 <!-- FINAL -->
-<div class="page" id="page-final">
+<div class="page active" id="page-final">
   <div class="day-section"><div class="day-label">Sunday, July 19</div><div class="matches-grid single">
-    <div class="match-card tbc featured"><div class="match-num">M104</div><div class="match-teams"><div class="tbd-name">Semi Final 1 winner</div><div class="vs-divider">vs</div><div class="tbd-name">Semi Final 2 winner</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">MetLife Stadium<br>East Rutherford, NJ</div><div class="badge final-badge">🏆 World Cup Final</div></div></div>
+    <div class="match-card featured"><div class="match-num">M104</div><div class="match-teams"><div class="team-name">✓ Spain</div><div class="vs-divider">vs</div><div class="team-name">✓ Argentina</div></div><div class="match-meta"><div class="match-time">3:00 PM ET</div><div class="match-venue">MetLife Stadium<br>East Rutherford, NJ</div><div class="badge final-badge">🏆 World Cup Final — Jul 19</div></div></div>
   </div></div>
   <div class="page-note">Both finalists confirmed by Jul 15</div>
 </div>
@@ -264,9 +264,9 @@
 
 <script>
 const PAGE_META = {
-  r32:   { title:'Round of 32 Complete · Round of 16 Begins Today!',  sub:'Last updated Jul 11 · All 4 QF complete · All times Eastern · Jun 28–Jul 3' },
+  r32:   { title:'Round of 32 Complete · Round of 16 Begins Today!',  sub:'Last updated Jul 15 · Semi Finals complete · All times Eastern · Jun 28–Jul 3' },
   r16:   { title:'Round of 16',                     sub:'Teams confirmed as each R32 match concludes · All times Eastern · Jul 4–7' },
-  qf:    { title:'Quarter Finals',                  sub:'Last updated Jul 11 · All 4 QF complete · All times Eastern · Jul 9–11' },
+  qf:    { title:'Quarter Finals',                  sub:'Last updated Jul 15 · Semi Finals complete · All times Eastern · Jul 9–11' },
   sf:    { title:'Semi Finals',                     sub:'Teams confirmed as each QF match concludes · All times Eastern · Jul 14–15' },
   tp:    { title:'3rd Place Match',                 sub:'Both teams confirmed by Jul 15 · All times Eastern · Jul 18' },
   final: { title:'World Cup Final',                 sub:'Both finalists confirmed by Jul 15 · MetLife Stadium, East Rutherford NJ · Jul 19' },
@@ -346,7 +346,7 @@ function renderR32() {
 }
 
 renderR32();
-showPage('sf');
+showPage('final');
 </script>
 </body>
 </html>
